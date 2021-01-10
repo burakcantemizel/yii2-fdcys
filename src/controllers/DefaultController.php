@@ -1,6 +1,6 @@
 <?php
 
-namespace burakcantemizel\fdycs\controllers;
+namespace burakcantemizel\fdcys\controllers;
 
 class DefaultController extends \yii\web\Controller{
 
