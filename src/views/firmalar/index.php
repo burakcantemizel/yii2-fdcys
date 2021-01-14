@@ -39,3 +39,4 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 </div>
+<?= Html::a('Modül Anasayfasına Dön', ['/fdcys/'], ['class'=>'btn btn-primary']) ?>
