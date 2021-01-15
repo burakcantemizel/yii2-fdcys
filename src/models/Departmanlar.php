@@ -46,7 +46,7 @@ class Departmanlar extends \yii\db\ActiveRecord
     {
         return [
             'departman_id' => 'Departman ID',
-            'firmalar_firma_id' => 'Firmalar Firma ID',
+            'firmalar_firma_id' => 'Firma Adı**',
             'departman_adi' => 'Departman Adi',
             'departman_adres' => 'Departman Adres',
             'departman_telefon' => 'Departman Telefon',

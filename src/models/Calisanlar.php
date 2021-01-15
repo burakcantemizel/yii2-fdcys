@@ -50,8 +50,8 @@ class Calisanlar extends \yii\db\ActiveRecord
     {
         return [
             'calisan_id' => 'Calisan ID',
-            'departmanlar_departman_id' => 'Departmanlar Departman ID',
-            'firmalar_firma_id' => 'Firmalar Firma ID',
+            'departmanlar_departman_id' => 'Departman Adı**',
+            'firmalar_firma_id' => 'Firma Adı**',
             'calisan_ad_soyad' => 'Calisan Ad Soyad',
             'calisan_tc_no' => 'Calisan Tc No',
             'calisan_telefon' => 'Calisan Telefon',

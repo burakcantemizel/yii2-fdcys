@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\DepartmanlarSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Departmanlars';
+$this->title = 'Departmanlar';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="departmanlar-index">
@@ -16,6 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Create Departmanlar', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('HTTP API', ['api/departmanlar'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

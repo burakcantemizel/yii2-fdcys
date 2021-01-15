@@ -2,6 +2,7 @@
 Firma-Departman-Çalışan Yönetim Sistemi Modülü
 
 # Hakkında
+
 Bu modül aracılığıyla firmalar yaratabilir, bu firmalara bağlı departmanlar oluşturabilir ve departmanlar altında da çalışan insanların bilgilerini tutabilirsiniz. Modül İnternet Programcılığı dersinin uygulamasıdır. İlerleyen kısmınlarda daha detaylı bilgi verilecektir.
 
 # Kurulum
@@ -11,7 +12,7 @@ Modül kurulumu vagrant ve yii2-advanced template'i üzerinden anlatılacaktır.
 ssh veya vagrant ssh ile vagrant üzerinde yii projenizin ana dizinine gidiniz.(Örneğin /var/www/advanced)
 
 ```
- composer require --prefer-dist burakcantemizel/yii2-fdcys "dev-master"
+composer require --prefer-dist burakcantemizel/yii2-fdcys "dev-master"
  ```
 
  komutu ile packegist üzerinden modül kurulumunu gerçekleştiriniz.
@@ -20,12 +21,11 @@ Daha sonrasında yii projenizin ana dizininde backend\config\main.php dosyasın�
 
 ```
 'modules' => [
-       ...
-     'fdcys' => [
-            'class' => 'burakcantemizel\\fdcys\Module',
-        ],
-
-   ],
+    ...
+    'fdcys' => [
+        'class' => 'burakcantemizel\\fdcys\Module',
+    ],
+],
  ```
 
 Önemli Not: Burada önemli bir nokta "\f" özel karakter olduğu için slash karakteri kaçış karakteri olarak girilmiştir buna dikkat ediniz.
@@ -37,7 +37,7 @@ Modülün çalışabilmesi için son olarak migration işleminin gerçekleştiri
 ssh bağlantısı ile vagrant üzerinde proje ana dizinindeyken alttaki komut çalıştırılmalıdır.
 
 ```
-    php yii migrate/up --migrationPath=@vendor/burakcantemizel/yii2-fdcys/src/migrations
+php yii migrate/up --migrationPath=@vendor/burakcantemizel/yii2-fdcys/src/migrations
  ```
 
  Artık migration işlemimiz gerçekleştirilmiştir. Modülümüz çalışır hale gelmiştir.
@@ -45,8 +45,9 @@ ssh bağlantısı ile vagrant üzerinde proje ana dizinindeyken alttaki komut ç
  Modülü test etmek için tarayıcınızda siteAdresi/backend/web/index.php?r=fdcys adresine gidiniz. Modül anasayfasını karşınızda göreceksiniz.
 
 
-# Modül Tanıtımı
-Bu kısımda modülün içeriği, derslerin uygulamaları vs. gösterilecektir.
+# Modül Tanıtımı ve Proje Raporu
+
+Bu kısımda modülün içeriği, derslerin uygulamaları vs. gösterilecektir ve bazı kısımlar özet olarak anlatılacaktır.
 
 ## Migrations
 
@@ -135,9 +136,27 @@ seach modellerde yukarıdaki gibi query işlemleriyle id columnu üstünde isme 
 
 ## Modül Ana Sayfası
 
-Yii derslerinden önce yaptığımız html, css derslerinin bir uygulaması olarakta w3.css kullanarak basit bir modül anasayfası ekledim. Buradan modülün farklı kısımlarına route aracılığıyla yönlendirme yaptım. Modül içerisindeki kısımlara bu sayfaya dönmek için butonlar yerleştirdim.
+Yii derslerinden önce yaptığımız html, css derslerinin bir uygulaması olarakta w3.css kullanarak basit bir modül anasayfası ekledim. Buradan modülün farklı kısımlarına route aracılığıyla yönlendirme yaptım. Modül içerisindeki kısımlara bu sayfaya dönmek için butonlar yerleştirdim. Ayrıca mevcut firma, departman ve çalışan sayılarını kullanıcıya sundum.
 
 ![](readmeFiles/anasayfa.jpg)
+
+## HTTP API
+
+ApiController içerisinde tanımlanmış 3 action aracılığı ile http üzerinden get isteklerine karşılık mevcut firmaların, departmanların ve çalışanların listelerini modellerden alarak json formatında response olarak döndürdüm.
+
+domain/backend/web/index.php?r=fdcys/api/firmalar
+
+domain/backend/web/index.php?r=fdcys/api/departmanlar
+
+domain/backend/web/index.php?r=fdcys/api/calisanlar
+
+adreslerine atılan get istekleri ile anlık listelere ulaşılabilir. Ayrıca CRUD işlemleri gerçekleştirilirken ilgili sayfada HTTP API butonu ile tarayıcı üzerinden de istek görüntülenebilir.Örnek olarak postmanden firmalar adresine atılmış bir istek aşağıdadır.
+
+![](readmeFiles/api.jpg)
+
+## Language Translation
+
+Language translation'ı yii-advanced template'i üzerindeki configürasyonumdan extension üzerine taşıyamadığım için messages klasörü işlevsizdir ve çalışmamaktadır
 
 # Diğer Ders Uygulamaları
 

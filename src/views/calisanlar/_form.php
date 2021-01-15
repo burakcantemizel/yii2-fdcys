@@ -19,16 +19,16 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?= $form->field($model, 'firmalar_firma_id')->dropDownList(
+        ArrayHelper::map(Firmalar::find()->all(),'firma_id', 'firma_adi'),
+        ['prompt' => 'Firma Seçiniz']
+    ) ?>
+
     <?= $form->field($model, 'departmanlar_departman_id')->dropDownList(
         ArrayHelper::map(Departmanlar::find()->all(),'departman_id', 'departman_adi'),
         ['prompt' => 'Departman Seçiniz']
     ) ?>
     
-
-    <?= $form->field($model, 'firmalar_firma_id')->dropDownList(
-        ArrayHelper::map(Firmalar::find()->all(),'firma_id', 'firma_adi'),
-        ['prompt' => 'Firma Seçiniz']
-    ) ?>
 
     <?= $form->field($model, 'calisan_ad_soyad')->textInput(['maxlength' => true]) ?>
 

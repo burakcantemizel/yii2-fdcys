@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\FirmalarSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Firmalars';
+$this->title = 'Firmalar';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="firmalar-index">
@@ -16,6 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Create Firmalar', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('HTTP API', ['api/firmalar'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

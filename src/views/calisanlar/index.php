@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\CalisanlarSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Calisanlars';
+$this->title = 'Calisanlar';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="calisanlar-index">
@@ -16,6 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Create Calisanlar', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('HTTP API', ['api/calisanlar'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -26,15 +27,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            [
-                'attribute' => 'departmanlar_departman_id',
-                'value' => 'departmanlarDepartman.departman_adi',
-            ],
 
             [
                 'attribute' => 'firmalar_firma_id',
                 'value' => 'firmalarFirma.firma_adi',
             ],
+
+            [
+                'attribute' => 'departmanlar_departman_id',
+                'value' => 'departmanlarDepartman.departman_adi',
+            ],
+
             
             'calisan_id',
             'calisan_ad_soyad',
