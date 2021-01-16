@@ -15,7 +15,7 @@ ssh veya vagrant ssh ile vagrant üzerinde yii projenizin ana dizinine gidiniz.(
 composer require --prefer-dist burakcantemizel/yii2-fdcys "dev-master"
  ```
 
- komutu ile packegist üzerinden modül kurulumunu gerçekleştiriniz.
+komutu ile packagist üzerinden modül kurulumunu gerçekleştiriniz.
     
 Daha sonrasında yii projenizin ana dizininde backend\config\main.php dosyasını düzenlemek için açınız. Aşağıda gösterildiği şekilde düzenlemeyi yapınız.
 
@@ -28,7 +28,7 @@ Daha sonrasında yii projenizin ana dizininde backend\config\main.php dosyasın�
 ],
  ```
 
-Önemli Not: Burada önemli bir nokta "\f" özel karakter olduğu için slash karakteri kaçış karakteri olarak girilmiştir buna dikkat ediniz.
+<strong>Önemli Not: Burada önemli bir nokta "\f" özel karakter olduğu için slash karakteri kaçış karakteri olarak girilmiştir buna dikkat ediniz.</strong>
 
 Composer kurulumuyla ilgili problem yaşarsanız yii projenizin ana dizininde vendor\burakcantemizel klasörünü oluşturup git reposunu clonelayabilirsiniz.
 
