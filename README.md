@@ -113,9 +113,11 @@ aynı şekilde çalışanlar index.php içerisined GridView widgetı düzenlener
             ...
 ```
 
-Bu işlemlerin sonunda artık Çalışanlar tablosunda create işlemi yaptığımızda Firma seçerken Firmalar tablosundaki mevcut firmalar listeleniyor, aynı şekilde departman seçimi yaptığımızda da departmanlar tablosunda bulunan departmanlar listeleniyor. Daha sonrasında görüntülenirken de artık ilişkiler idler ile değil de id'lere karşılık gelen departman ve firma isimleriyle kullanıcıya sunuluyor. İlişkilerin görülebilmesi için column isimlerindeki id başlıkları bilerek değiştirilmemiştir.
+Bu işlemlerin sonunda artık Çalışanlar tablosunda create işlemi yaptığımızda Firma seçerken Firmalar tablosundaki mevcut firmalar listeleniyor, aynı şekilde departman seçimi yaptığımızda da departmanlar tablosunda bulunan departmanlar listeleniyor. Daha sonrasında görüntülenirken de artık ilişkiler idler ile değil de id'lere karşılık gelen departman ve firma isimleriyle kullanıcıya sunuluyor.
 
 ![](readmeFiles/formlar.jpg)
+
+Tablolar birbiri ile ilişkili olduğu için ilişkili bir kayıtı sildiğinizde bağlı olan diğer kayıtlarda silinecektir. Örneğin bir departmanı silerseniz o departmanda çalışan tüm kişilerin kayıtları da silinecektir.
 
 ## Search Model ve Query
 
@@ -136,7 +138,7 @@ seach modellerde yukarıdaki gibi query işlemleriyle id columnu üstünde isme 
 
 ## Modül Ana Sayfası
 
-Yii derslerinden önce yaptığımız html, css derslerinin bir uygulaması olarakta w3.css kullanarak basit bir modül anasayfası ekledim. Buradan modülün farklı kısımlarına route aracılığıyla yönlendirme yaptım. Modül içerisindeki kısımlara bu sayfaya dönmek için butonlar yerleştirdim. Ayrıca mevcut firma, departman ve çalışan sayılarını kullanıcıya sundum.
+Yii derslerinden önce yaptığımız html, css derslerinin bir uygulaması olarakta w3.css kullanarak basit bir modül anasayfası ekledim. Buradan modülün farklı kısımlarına route aracılığıyla yönlendirme yaptım. Modül içerisindeki kısımlara bu sayfaya dönmek için butonlar yerleştirdim. Ayrıca mevcut firma, departman ve çalışan sayılarını modellerden alarak kullanıcıya sundum.
 
 ![](readmeFiles/anasayfa.jpg)
 
@@ -158,6 +160,6 @@ adreslerine atılan get istekleri ile anlık listelere ulaşılabilir. Ayrıca C
 
 Language translation'ı yii-advanced template'i üzerindeki configürasyonumdan extension üzerine taşıyamadığım için messages klasörü işlevsizdir ve çalışmamaktadır
 
-# Diğer Ders Uygulamaları
+## Diğer Ders Uygulamaları
 
 Yukarıdaki kısımlarda genel itibarı ile gerçeklediğim uygulamalara değindim. Mastering Yii kitabının 1-5 arası chapterlarında kullandığım ama değinmediğim farklı uygulamalar olabilir. Proje içerisinde daha detaylı inceleyebilirsiniz.

@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Create Calisanlar', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('HTTP API', ['api/calisanlar'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Get List HTTP API', ['api/calisanlar'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
