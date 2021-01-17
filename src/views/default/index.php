@@ -4,6 +4,7 @@ use yii\widgets\ActiveForm;
 use burakcantemizel\fdcys\models\Departmanlar;
 use burakcantemizel\fdcys\models\Firmalar;
 use burakcantemizel\fdcys\models\Calisanlar;
+use burakcantemizel\fdcys\widgets\merhaba;
 
 $calisan_adet = count(Calisanlar::find()->all());
 $firma_adet = count(Firmalar::find()->all());
@@ -17,13 +18,15 @@ $this->title = 'Firma-Departman-Çalışan Yönetim Sistemi';
 
 
 <div class="w3-card">
-
+<?= merhaba::widget([]) ?>
 </div>
 
 <div class="w3-card-4">
 
   <header class="w3-container w3-blue">
     <h1>Firmalar-Departmanlar-Çalışanlar Yönetim Sistemi</h1>
+    
+    
   </header>
 
  

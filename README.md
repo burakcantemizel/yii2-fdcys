@@ -85,7 +85,7 @@ Her tablo için migration ile tanımlanan ilişkisel özellikler baz alınarak g
 
   Daha sonra temel işlevsellik İçin Gii ile bu modeller üzerinden CRUD oluşturulmuştur. CRUD oluşturulurken controllerlar ve viewlarda generate edilmiştir. Daha sonrasında gerekli düzenlemelerle tablolar birbirine bağlanacaktır.
 
-## Formlar, Widget
+## Forms
 
 Formlar üzerinde çeşitli düzenlemeler yapılmıştır. Örneğin çalışanlar _form.php için ilişkisel id columnları aşağıdaki şekilde düzenlenmiştir. ArrayHelper, DropDownList gibi çeşitli yapılar kullanılarak ilişkili tablodan id ye karşılık gelen ismin seçilebilmesi sağlanmıştır.
 
@@ -155,6 +155,18 @@ domain/backend/web/index.php?r=fdcys/api/calisanlar
 adreslerine atılan get istekleri ile anlık listelere ulaşılabilir. Ayrıca CRUD işlemleri gerçekleştirilirken ilgili sayfada HTTP API butonu ile tarayıcı üzerinden de istek görüntülenebilir.Örnek olarak postmanden firmalar adresine atılmış bir istek aşağıdadır.
 
 ![](readmeFiles/api.jpg)
+
+## Layouts
+
+Projede görsellik istenmediği için sadece layout kullanımını göstermek adına yiinin main layoutunu modül içerisinde override edip footerı değiştirdim.
+
+![](readmeFiles/layout.jpg)
+
+## Custom Widget
+
+Yine aynı şekilde custom widget kullanımını göstermek adına giriş sayfasında hoşgeldiniz yazdıran basit bir widget oluşturdum.
+
+![](readmeFiles/widget.jpg)
 
 ## Language Translation
 
