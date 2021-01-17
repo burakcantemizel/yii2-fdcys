@@ -85,7 +85,7 @@ Her tablo için migration ile tanımlanan ilişkisel özellikler baz alınarak g
 
   Daha sonra temel işlevsellik İçin Gii ile bu modeller üzerinden CRUD oluşturulmuştur. CRUD oluşturulurken controllerlar ve viewlarda generate edilmiştir. Daha sonrasında gerekli düzenlemelerle tablolar birbirine bağlanacaktır.
 
-## Forms
+## Formlar, Widget
 
 Formlar üzerinde çeşitli düzenlemeler yapılmıştır. Örneğin çalışanlar _form.php için ilişkisel id columnları aşağıdaki şekilde düzenlenmiştir. ArrayHelper, DropDownList gibi çeşitli yapılar kullanılarak ilişkili tablodan id ye karşılık gelen ismin seçilebilmesi sağlanmıştır.
 
