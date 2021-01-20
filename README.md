@@ -1,6 +1,9 @@
 # yii2-fdcys
 Firma-Departman-Çalışan Yönetim Sistemi Modülü
 
+Burak Can Temizel
+180202024
+
 # Hakkında
 
 Bu modül aracılığıyla firmalar yaratabilir, bu firmalara bağlı departmanlar oluşturabilir ve departmanlar altında da çalışan insanların bilgilerini tutabilirsiniz. Modül İnternet Programcılığı dersinin uygulamasıdır. İlerleyen kısmınlarda daha detaylı bilgi verilecektir.
